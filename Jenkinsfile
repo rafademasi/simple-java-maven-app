@@ -3,7 +3,10 @@ pipeline {
        stages {
         stage('Build') {
             steps {
-                sh 'mvn -B -DskipTests clean package'
+                    env.JAVA_HOME="${tool 'Corretto'}"
+   		    env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
+                    sh 'java -version'
+		sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
