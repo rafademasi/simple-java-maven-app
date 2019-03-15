@@ -1,11 +1,13 @@
 pipeline {
        agent any
-       stages {
+       env.JAVA_HOME="${tool 'Corretto'}"
+      env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
+       
+
+stages {
         stage('Build') {
             steps {
-                    env.JAVA_HOME="${tool 'Corretto'}"
-   		    env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
-                    sh 'java -version'
+                sh 'java -version'
 		sh 'mvn -B -DskipTests clean package'
             }
         }
