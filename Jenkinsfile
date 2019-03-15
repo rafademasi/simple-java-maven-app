@@ -1,9 +1,6 @@
 pipeline {
        agent any
-       environment{
-	JAVA_HOME="${tool 'Corretto'}"
-       	PATH="${env.JAVA_HOME}/bin:${env.PATH}"
-       }
+      
 
 
 stages {
