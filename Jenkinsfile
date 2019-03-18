@@ -1,7 +1,10 @@
 pipeline {
-       agent any
-      
-
+       agent 'worker01-172.18.0.3-80b89ad7' 
+       
+	 environment{
+	JAVA_HOME="${tool 'Corretto'}"
+       	PATH="${env.JAVA_HOME}/bin:${env.PATH}"
+       }
 
 stages {
         stage('Build') {
