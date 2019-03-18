@@ -1,10 +1,10 @@
 pipeline {
-       agent {label 'swarm'} 
+       agent {label 'swarm'}
        
-	 environment{
-	JAVA_HOME="${tool 'Corretto'}"
-       	PATH="${env.JAVA_HOME}/bin:${env.PATH}"
-       }
+
+
+
+      
 
 stages {
         stage('Build') {
