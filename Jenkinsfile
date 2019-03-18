@@ -1,5 +1,5 @@
 pipeline {
-       agent {label 'worker01-172.18.0.3-80b89ad7i'} 
+       agent {label 'swarm'} 
        
 	 environment{
 	JAVA_HOME="${tool 'Corretto'}"
