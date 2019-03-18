@@ -1,5 +1,5 @@
 pipeline {
-       agent {worker01-172.18.0.3-80b89ad7} 
+       agent {'worker01-172.18.0.3-80b89ad7'} 
        
 	 environment{
 	JAVA_HOME="${tool 'Corretto'}"
