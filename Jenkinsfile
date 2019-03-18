@@ -1,5 +1,5 @@
 pipeline {
-       agent {label 'swarm'}
+       agent {label 'master'}
        
 
 
